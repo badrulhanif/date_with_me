@@ -1,11 +1,13 @@
 import Image from "next/image";
 import moviePoster from "../public/images/movie_poster.jpg";
+import popcorn from "../public/images/popcorn.jpg";
+import wetTissue from "../public/images/wet tissue.jpg";
 import { useRouter } from "next/dist/client/router";
 
 function MovieTitle() {
   const router = useRouter();
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen md:flex-row text-center ">
+    <div className="flex flex-col items-center justify-center min-h-screen md:flex-row text-center p-16">
       <div>
         <h1 className="text-3xl font-bold mb-5">
           The Umbrella Academy <a className="text-red-500"> 3</a>
@@ -19,7 +21,7 @@ function MovieTitle() {
         <p className="text-red-500 mt-1 text-medium">
           Only 2 seats available. (You & Me)
         </p>
-        <div className="mt-2 px-28">
+        <div className="mt-2 px-12">
           <div className="pr-64">
             <button className="rounded border-solid py-0.5 px-2 mt-3 mr-2 bg-black text-xs text-white cursor-default">
               PG-13
@@ -37,13 +39,12 @@ function MovieTitle() {
             series kot, 83% on rotten tomatoes. You not gonna miss it and come
             enjoy it with me. 🍿
           </p>
-          <p className="flex px-96 mt-8 text-xl font-bold">Add-On</p>
         </div>
         <button
           className="rounded-md border-solid py-1 px-4 justify-end bg-cyan-500 mt-6 text-white"
-          onClick={() => router.push("/addOn")}
+          onClick={() => router.push("/watchMovie")}
         >
-          Continue
+          Let's Watch
         </button>
       </div>
     </div>
